@@ -1,0 +1,104 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Tecnologia & Facturación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="accesorios de viaje.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">It’s Time To Travel</div>
+    <nav>
+      <a href="It's Time To Travel.html">Inicio</a>
+      <a href="Productos.html" class="active">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <button id="dark-toggle" class="dark-toggle">🌙</button>
+  </header>
+
+  <!-- CATÁLOGO + FACTURACIÓN -->
+ <main>
+  <section class="catalogo-facturacion">
+    <h1>TECNOLOGIA</h1>
+    <div class="productos-grid">
+
+      <!-- Power Banks -->
+      <div class="producto">
+        <img src="productos/Power Bank 1.jpg" alt="POWER BANK BASEUSBIPOW DIGITAL DISPLAY BLACK"/>
+        <h3>POWER BANK BASEUSBIPOW DIGITAL DISPLAY BLACK</h3>
+        <p>$40.00 USD</p>
+        <button class="agregar" data-nombre="POWER BANK BASEUSBIPOW DIGITAL DISPLAY BLACK" data-precio="40.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/Power Bank 2.jpg" alt="OWERΛDD PRO POWER BANK BLACK"/>
+        <h3>OWERΛDD PRO POWER BANK BLACK</h3>
+        <p>$80.00 USD</p>
+        <button class="agregar" data-nombre="OWERΛDD PRO POWER BANK BLACK" data-precio="80.00">Agregar</button>
+      </div>
+
+      <!-- Adaptadores -->
+      <div class="producto">
+        <img src="productos/Adaptador 1.jpg" alt="PICKA PULSE EUROPEAN TRAVEL PLUG ADAPTER BLACK"/>
+        <h3>PICKA PULSE EUROPEAN TRAVEL PLUG ADAPTER BLACK</h3>
+        <p>$20.00 USD</p>
+        <button class="agregar" data-nombre="PICKA PULSE EUROPEAN TRAVEL PLUG ADAPTER BLACK" data-precio="20.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/Adaptador 2.jpg" alt="LENCENT UNIVERSAL TRAVEL ADAPTER PD20W BLACK"/>
+        <h3>LENCENT UNIVERSAL TRAVEL ADAPTER PD20W BLACK</h3>
+        <p>$25.00 USD</p>
+        <button class="agregar" data-nombre="LENCENT UNIVERSAL TRAVEL ADAPTER PD20W BLACK" data-precio="25.00">Agregar</button>
+      </div>
+
+      <!-- Rastreadores -->
+      <div class="producto">
+        <img src="productos/Rastreador 1.jpg" alt="PORTABLE REAL-TIME GPS TRACKER GF22"/>
+        <h3>PORTABLE REAL-TIME GPS TRACKER GF22</h3>
+        <p>$28.00 USD</p>
+        <button class="agregar" data-nombre="PORTABLE REAL-TIME GPS TRACKER GF22" data-precio="28.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/Rastreador 2.jpg" alt="FUMEI 4G LTE MOBILE ROUTER WIFI HOTSPOT SUPPORTS 10 CONNECTIONS"/>
+        <h3>FUMEI 4G LTE MOBILE ROUTER WIFI HOTSPOT SUPPORTS 10 CONNECTIONS</h3>
+        <p>$35.00 USD</p>
+        <button class="agregar" data-nombre="FUMEI 4G LTE MOBILE ROUTER WIFI HOTSPOT SUPPORTS 10 CONNECTIONS" data-precio="35.00">Agregar</button>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+  <!-- CARRITO -->
+  <button id="carrito-toggle" class="carrito-icono">🛒</button>
+  <aside id="carrito" class="carrito">
+    <!-- Sonidos -->
+<audio id="sound-add" src="sonidos/electric-beep.mp3"></audio>
+<audio id="sound-empty" src="sonidos/paper-sound.mp3"></audio>
+
+
+
+    <h2>Tu Carrito</h2>
+    <ul id="items-carrito"></ul>
+    <p>Total: $<span id="total">0.00</span> USD</p>
+    <button id="vaciar">Vaciar Carrito</button>
+  </aside>
+
+<a href="It's Time To Travel.html" class="btn-volver" title="Volver">
+  <svg viewBox="0 0 24 24" class="icon-volver" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor">
+    <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 It’s Time To Travel. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="accesorios de viaje.js"></script>
+</body>
+</html>

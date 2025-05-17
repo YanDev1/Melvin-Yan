@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - It’s Time To Travel</title>
+  <link rel="stylesheet" href="Productos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="It's Time To Travel.html" class="logo-link-independiente">
+      <img src="logo.png" alt="Logo de Melvin & Yan" class="logo-independiente" />
+    </a>
+    <div class="derechos">Melvin & Yan</div>
+    <nav class="nav-links">
+      <a href="It's Time To Travel.html">Inicio</a>
+      <a href="Productos.html">Productos</a>
+      <a class="active" href="Contacto.html">Contacto</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search..." />
+      <button>🔍</button>
+    </div>
+  </header>
+
+  <style>
+    main p {
+      color: white;
+    }
+    /* Animación para los iconos sociales */
+    main div[style*="display: flex"] a {
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    main div[style*="display: flex"] a:hover {
+      transform: scale(1.2) translateY(-5px);
+    }
+    main div[style*="display: flex"] a[href*="discord"] {
+      color: #7289da;
+    }
+    main div[style*="display: flex"] a[href*="discord"]:hover {
+      color: #5b6eae;
+    }
+    main div[style*="display: flex"] a[href*="instagram"] {
+      color: #e1306c;
+    }
+    main div[style*="display: flex"] a[href*="instagram"]:hover {
+      color: #b82857;
+    }
+    </style>
+
+  <main style="max-width: 600px; margin: 50px auto; text-align: center; font-family: 'Open Sans', sans-serif; padding: 0 20px;">
+    <h1 style="font-family: 'Montserrat', sans-serif; margin-bottom: 20px;">Contactanos</h1>
+    <p style="font-size: 1.1rem; margin-bottom: 40px; color: white;">Puedes encontrarnos en nuestras redes sociales o enviarnos un mensaje directo:</p>
+
+    <div style="display: flex; justify-content: center; gap: 40px; font-size: 2.5rem;">
+      <a href="https://discord.com" target="_blank" rel="noopener" style="color: #7289da;" aria-label="Discord">
+        <i class="fab fa-discord"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" style="color: #e1306c;" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col brand">
+        <h2>It’s Time to Travel</h2>
+        <p>Explora. Descubre. Vive.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Destinos</a></li>
+          <li><a href="#">Promociones</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Siguenos</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 It’s Time to Travel. Todos los derechos reservados.
+    </div>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <div id="particles-footer"></div>
+    <script>
+      particlesJS("particles-footer", {
+        particles: {
+          number: { value: 60 },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.1 },
+          size: { value: 3 },
+          move: { enable: true, speed: 1.5 },
+          line_linked: { enable: false }
+        },
+        interactivity: {
+          events: { onhover: { enable: false }, onclick: { enable: false } }
+        }
+      });
+    </script>
+  </footer>
+
+  <script src="Productos.js" defer></script>
+</body>
+</html>

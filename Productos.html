@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos Disponibles</title>
+  <link rel="stylesheet" href="Productos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="It's Time To Travel.html" class="logo-link-independiente">
+      <img src="logo.png" alt="Logo de Melvin & Yan" class="logo-independiente" />
+    </a>
+    
+    <div class="derechos">Melvin & Yan</div>
+    <nav class="nav-links">
+      <a href="It's Time To Travel.html">Inicio</a>
+      <a class="active" href="Productos.html">Productos</a>
+      <a href="Contacto.html">Contacto</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Search..." />
+      <button>🔍</button>
+    </div>
+
+  </header>
+
+  <section class="hero-productos">
+    <div class="hero-content">
+      <h1>Productos para Viajeros</h1>
+      <p>"Its Time To Travel" también ofrece una selección de productos ideales para negocios que venden artículos de viaje. Desde mochilas resistentes hasta kits portátiles y gadgets útiles. Todo en un solo lugar.</p>
+    <a href="#galeria-productos" class="btn-primary">Ver Catálogo</a>
+    </div>
+<div class="hero-image"> 
+  <img src="viaje.png" alt="Productos para viajeros" />
+  <div class="semicircle-wrapper">
+    <div class="arc"></div>
+    <div class="semicircle"></div>
+  </div>
+</div>
+
+    
+
+  </section>
+
+
+  <!-- Galería de Productos -->
+  <section id="galeria-productos">
+    <h2>Explora por Categoría</h2>
+    <div class="galeria-grid">
+      <div class="categoria">
+        <a href="accesorios de viaje.html"><img src="Accesorios-de-viaje.jpg" alt="Accesorios de viaje"></a>
+        <h3>Accesorios de viaje</h3>
+        <p>Mochilas, maletas, riñoneras de seguridad.</p>
+      </div>
+      <div class="categoria">
+        <a href="tecnologia.html"><img src="tecnologia.jpeg" alt="Tecnología"></a>
+        <h3>Tecnología</h3>
+        <p>Power banks, adaptadores universales, rastreadores GPS.</p>
+      </div>
+      <div class="categoria">
+        <a href="comodidad.html"><img src="comididad.jpeg" alt="Comodidad"></a>
+        <h3>Comodidad</h3>
+        <p>Almohadas de viaje, mantas compactas, tapones para los oídos.</p>
+      </div>
+      <div class="categoria">
+        <a href="seguridad.html"><img src="seguridad.jpeg" alt="Seguridad"></a>
+        <h3>Seguridad</h3>
+        <p>Candados TSA, botiquines de viaje, filtros de agua.</p>
+      </div>
+      <div class="categoria">
+        <a href="entretenimiento.html"><img src="entretenimiento.jpg" alt="Entretenimiento"></a>
+        <h3>Entretenimiento</h3>
+        <p>Ebooks, soportes para celulares, cámaras deportivas.</p>
+      </div>
+    </div>
+  </section>
+  <hr>
+ 
+<section class="accesorios-destacados">
+  <h2 id="titulo-accesorios">Accesorios de Viaje</h2>
+  <div class="tarjetas-accesorios">
+    <div class="tarjeta">
+      <img src="mochilas.png" alt="Mochilas">
+      <div class="contenido">
+        <h3>Mochilas</h3>
+        <p>Diseñadas para viajeros modernos, resistentes y con varios compartimentos.</p>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <img src="maletas.png" alt="Maletas">
+      <div class="contenido">
+        <h3>Maletas</h3>
+        <p>Rígidas, ligeras y con ruedas 360º para tu comodidad en el aeropuerto.</p>
+      </div>
+    </div>
+    <div class="tarjeta">
+      <img src="riñoneras de seguridad.png" alt="Riñoneras de Seguridad">
+      <div class="contenido">
+        <h3>Riñoneras de Seguridad</h3>
+        <p>Perfectas para llevar pasaportes, dinero y documentos importantes ocultos y seguros.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Botón de modo oscuro -->
+
+<!-- Añade este botón dentro de <header class="navbar">, al final -->
+<!-- Dentro de <body>, justo después de abrirlo -->
+<button id="dark-mode-toggle" class="dark-toggle">🌙</button>
+    
+<script src="Productos.js" defer></script>
+
+
+
+
+
+<!-- Botón de subir -->
+<button class="boton-subir" id="boton-subir">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+  // Referencia al botón de subir
+  const botonSubir = document.getElementById("boton-subir");
+
+  // Mostrar el botón al desplazarse hacia abajo
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      botonSubir.classList.add("mostrar");
+    } else {
+      botonSubir.classList.remove("mostrar");
+    }
+  });
+
+  // Desplazarse hacia arriba al hacer clic en el botón
+  botonSubir.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <h2>It’s Time to Travel</h2>
+      <p>Explora. Descubre. Vive.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Enlaces</h3>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Destinos</a></li>
+        <li><a href="#">Promociones</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Síguenos</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 It’s Time to Travel. Todos los derechos reservados.
+  </div>
+
+  <!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<div id="particles-footer"></div>
+
+<script>
+  particlesJS("particles-footer", {
+    particles: {
+      number: { value: 60 },
+      color: { value: "#ffffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.1 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1.5 },   
+      line_linked: { enable: false }
+    },
+    interactivity: {
+      events: { onhover: { enable: false }, onclick: { enable: false } }
+    }
+  });
+</script>
+</footer>
+
+
+
+
+</body>
+</html>

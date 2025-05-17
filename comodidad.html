@@ -1,0 +1,104 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Comodidad & Facturación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="accesorios de viaje.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">It’s Time To Travel</div>
+    <nav>
+      <a href="It's Time To Travel.html">Inicio</a>
+      <a href="Productos.html" class="active">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <button id="dark-toggle" class="dark-toggle">🌙</button>
+  </header>
+
+  <!-- CATÁLOGO + FACTURACIÓN -->
+ <main>
+  <section class="catalogo-facturacion">
+    <h1>COMODIDAD</h1>
+    <div class="productos-grid">
+
+      <!-- Almohadas -->
+      <div class="producto">
+        <img src="productos/Almohada 1.jpg" alt="TRAVEL PILLOW MEMORY FOAM NECK LIGHT GREY"/>
+        <h3>TRAVEL PILLOW MEMORY FOAM NECK LIGHT GREY</h3>
+        <p>$25.00 USD</p>
+        <button class="agregar" data-nombre="TRAVEL PILLOW MEMORY FOAM NECK LIGHT GREY" data-precio="25.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/Almohada 2.jpg" alt="PYXAYS TRAVEL PILLOW BEIGE WHITE"/>
+        <h3>PYXAYS TRAVEL PILLOW BEIGE WHITE</h3>
+        <p>$20.00 USD</p>
+        <button class="agregar" data-nombre="PYXAYS TRAVEL PILLOW BEIGE WHITE" data-precio="20.00">Agregar</button>
+      </div>
+
+      <!-- Mantas -->
+      <div class="producto">
+        <img src="productos/Manta 1.jpg" alt="GREATOYAR FLANNEL BLANKET"/>
+        <h3>GREATOYAR FLANNEL BLANKET</h3>
+        <p>$30.00 USD</p>
+        <button class="agregar" data-nombre="GREATOYAR FLANNEL BLANKET" data-precio="30.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/Manta 2.jpg" alt="SOCHOW THROW BLANKET BLUE"/>
+        <h3>SOCHOW THROW BLANKET BLUE</h3>
+        <p>$35.00 USD</p>
+        <button class="agregar" data-nombre="SOCHOW THROW BLANKET BLUE" data-precio="35.00">Agregar</button>
+      </div>
+
+      <!-- Tapones -->
+      <div class="producto">
+        <img src="productos/Tapon 1.jpg" alt="SILICONE NOISE REDUCTION EARPLUGS"/>
+        <h3>SILICONE NOISE REDUCTION EARPLUGS</h3>
+        <p>$10.00 USD</p>
+        <button class="agregar" data-nombre="SILICONE NOISE REDUCTION EARPLUGS" data-precio="10.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/Tapon 2.jpg" alt="SILICONE EARPLUGS FOR SLEEP XS S M L"/>
+        <h3>SILICONE EARPLUGS FOR SLEEP XS S M L</h3>
+        <p>$12.00 USD</p>
+        <button class="agregar" data-nombre="SILICONE EARPLUGS FOR SLEEP XS S M L" data-precio="12.00">Agregar</button>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+  <!-- CARRITO -->
+  <button id="carrito-toggle" class="carrito-icono">🛒</button>
+  <aside id="carrito" class="carrito">
+    <!-- Sonidos -->
+<audio id="sound-add" src="sonidos/electric-beep.mp3"></audio>
+<audio id="sound-empty" src="sonidos/paper-sound.mp3"></audio>
+
+
+
+    <h2>Tu Carrito</h2>
+    <ul id="items-carrito"></ul>
+    <p>Total: $<span id="total">0.00</span> USD</p>
+    <button id="vaciar">Vaciar Carrito</button>
+  </aside>
+
+<a href="It's Time To Travel.html" class="btn-volver" title="Volver">
+  <svg viewBox="0 0 24 24" class="icon-volver" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor">
+    <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 It’s Time To Travel. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="accesorios de viaje.js"></script>
+</body>
+</html>

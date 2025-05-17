@@ -1,0 +1,104 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Entretenimiento & Facturación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="accesorios de viaje.css"/>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="navbar">
+    <div class="logo">It’s Time To Travel</div>
+    <nav>
+      <a href="It's Time To Travel.html">Inicio</a>
+      <a href="Productos.html" class="active">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <button id="dark-toggle" class="dark-toggle">🌙</button>
+  </header>
+
+  <!-- CATÁLOGO + FACTURACIÓN -->
+ <main>
+  <section class="catalogo-facturacion">
+    <h1>ENTRETENIMIENTO</h1>
+    <div class="productos-grid">
+
+      <!-- Ebooks -->
+      <div class="producto">
+        <img src="/productos/libro 1.jpg" alt="BOOK COVER MOCKUP DESIGN WITH PERSPECTIVE VIEW"/>
+        <h3>BOOK COVER MOCKUP DESIGN WITH PERSPECTIVE VIEW</h3>
+        <p>$15.00 USD</p>
+        <button class="agregar" data-nombre="BOOK COVER MOCKUP DESIGN WITH PERSPECTIVE VIEW" data-precio="15.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="/productos/libro 2.jpg" alt="KINDLE PAPERWHITE SIGNATURE EDITION CASE"/>
+        <h3>KINDLE PAPERWHITE SIGNATURE EDITION CASE PLANT-BASED COVER</h3>
+        <p>$19.99 USD</p>
+        <button class="agregar" data-nombre="KINDLE PAPERWHITE CASE" data-precio="19.99">Agregar</button>
+      </div>
+
+      <!-- Soporte -->
+      <div class="producto">
+        <img src="productos/soporte 1.jpg" alt="PINK PHONE HOLDER"/>
+        <h3>PINK PHONE HOLDER</h3>
+        <p>$5.00 USD</p>
+        <button class="agregar" data-nombre="PINK PHONE HOLDER" data-precio="5.00">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/soporte 2.jpg" alt="BLACK PHONE HOLDER"/>
+        <h3>BLACK PHONE HOLDER</h3>
+        <p>$5.00 USD</p>
+        <button class="agregar" data-nombre="BLACK PHONE HOLDER" data-precio="5.00">Agregar</button>
+      </div>
+
+      <!-- Cámara -->
+      <div class="producto">
+        <img src="productos/camara 1.jpg" alt="SPORTS ACTION CAMERA"/>
+        <h3>SPORTS ACTION CAMERA WATERPROOF 1080P</h3>
+        <p>$29.99 USD</p>
+        <button class="agregar" data-nombre="SPORTS ACTION CAMERA" data-precio="29.99">Agregar</button>
+      </div>
+      <div class="producto">
+        <img src="productos/camara 2.jpg" alt="ITECOSKY ACTION CAMERA"/>
+        <h3>ITECOSKY 1080P FULL HD WATERPROOF ACTION CAMERA SJ4000</h3>
+        <p>$39.99 USD</p>
+        <button class="agregar" data-nombre="ITECOSKY ACTION CAMERA" data-precio="39.99">Agregar</button>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+  <!-- CARRITO -->
+  <button id="carrito-toggle" class="carrito-icono">🛒</button>
+  <aside id="carrito" class="carrito">
+    <!-- Sonidos -->
+<audio id="sound-add" src="sonidos/electric-beep.mp3"></audio>
+<audio id="sound-empty" src="sonidos/paper-sound.mp3"></audio>
+
+
+
+    <h2>Tu Carrito</h2>
+    <ul id="items-carrito"></ul>
+    <p>Total: $<span id="total">0.00</span> USD</p>
+    <button id="vaciar">Vaciar Carrito</button>
+  </aside>
+
+<a href="It's Time To Travel.html" class="btn-volver" title="Volver">
+  <svg viewBox="0 0 24 24" class="icon-volver" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor">
+    <path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</a>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 It’s Time To Travel. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="accesorios de viaje.js"></script>
+</body>
+</html>
