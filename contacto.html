@@ -56,17 +56,94 @@
     </style>
 
   <main style="max-width: 600px; margin: 50px auto; text-align: center; font-family: 'Open Sans', sans-serif; padding: 0 20px;">
-    <h1 style="font-family: 'Montserrat', sans-serif; margin-bottom: 20px;">Contactanos</h1>
-    <p style="font-size: 1.1rem; margin-bottom: 40px; color: white;">Puedes encontrarnos en nuestras redes sociales o enviarnos un mensaje directo:</p>
+    <h1 style="font-family: 'Montserrat', sans-serif; margin-bottom: 20px;">Contáctanos</h1>
 
-    <div style="display: flex; justify-content: center; gap: 40px; font-size: 2.5rem;">
-      <a href="https://discord.com" target="_blank" rel="noopener" style="color: #7289da;" aria-label="Discord">
+    <!-- NUEVO: Sección sobre la empresa -->
+    <section style="background: rgba(255,255,255,0.08); border-radius: 18px; padding: 24px 18px; margin-bottom: 36px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
+      <h2 style="font-family: 'Montserrat', sans-serif; color: #f97316; margin-bottom: 12px;">¿Quiénes somos?</h2>
+      <p style="color: #fff; font-size: 1.05rem; margin-bottom: 10px;">
+        <strong>It’s Time To Travel</strong> es una agencia dedicada a crear experiencias de viaje inolvidables. Nos especializamos en ofrecer paquetes turísticos personalizados, asesoría experta y atención al cliente de calidad para que tu única preocupación sea disfrutar.
+      </p>
+      <p style="color: #fff; font-size: 1.05rem;">
+        Nuestro equipo está formado por apasionados viajeros que conocen los mejores destinos y tendencias del turismo actual. Ya sea que busques aventura, relax, cultura o gastronomía, tenemos la opción ideal para ti.
+      </p>
+    </section>
+
+    <!-- NUEVO: Sección de información de contacto -->
+    <section style="background: rgba(255,255,255,0.10); border-radius: 18px; padding: 18px 14px; margin-bottom: 36px; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+      <h2 style="font-family: 'Montserrat', sans-serif; color: #f97316; margin-bottom: 10px;">Información de contacto</h2>
+      <ul style="list-style: none; padding: 0; color: #fff; font-size: 1.05rem; text-align: left; max-width: 420px; margin: 0 auto;">
+        <li><i class="fas fa-envelope" style="color:#f97316; margin-right:8px;"></i> <strong>Email:</strong> contacto@itstimetotravel.com</li>
+        <li><i class="fas fa-phone" style="color:#f97316; margin-right:8px;"></i> <strong>Teléfono:</strong> +1 809 345 6678</li>
+        <li><i class="fas fa-map-marker-alt" style="color:#f97316; margin-right:8px;"></i> <strong>Dirección: </strong>Santo Domingo, R.D</li>
+        <li><i class="fas fa-clock" style="color:#f97316; margin-right:8px;"></i> <strong>Horario:</strong> Lunes a Viernes, 9:00AM - 5:30PM</li>
+      </ul>
+    </section>
+
+    <div style="display: flex; justify-content: center; gap: 40px; font-size: 2.5rem; margin-top: 30px;">
+      <a href="https://discord.com" target="_blank" rel="noopener" aria-label="Discord"
+         style="color: #7289da; background: rgba(114,137,218,0.12); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(114,137,218,0.18); transition: transform 0.3s, box-shadow 0.3s, background 0.3s; text-decoration: none;">
         <i class="fab fa-discord"></i>
       </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener" style="color: #e1306c;" aria-label="Instagram">
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"
+         style="color: #e1306c; background: rgba(225,48,108,0.12); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(225,48,108,0.18); transition: transform 0.3s, box-shadow 0.3s, background 0.3s; text-decoration: none;">
         <i class="fab fa-instagram"></i>
       </a>
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"
+         style="color: #1877f3; background: rgba(24,119,243,0.12); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(24,119,243,0.18); transition: transform 0.3s, box-shadow 0.3s, background 0.3s; text-decoration: none;">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"
+         style="color: #1da1f2; background: rgba(29,161,242,0.12); border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 18px rgba(29,161,242,0.18); transition: transform 0.3s, box-shadow 0.3s, background 0.3s; text-decoration: none;">
+        <i class="fab fa-twitter"></i>
+      </a>
     </div>
+    <style>
+      /* Burbujas y animaciones para los iconos de redes sociales */
+      main div[style*="display: flex"] a {
+        text-decoration: none !important;
+        border-bottom: none !important;
+        position: relative;
+        overflow: hidden;
+      }
+      main div[style*="display: flex"] a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0; top: 0;
+        border-radius: 50%;
+        background: radial-gradient(circle at 60% 40%, #fff3 0%, transparent 70%);
+        opacity: 0.7;
+        transition: opacity 0.3s;
+        z-index: 0;
+        pointer-events: none;
+      }
+      main div[style*="display: flex"] a:hover {
+        transform: scale(1.18) translateY(-8px) rotate(-6deg);
+        box-shadow: 0 8px 32px rgba(249,115,22,0.18), 0 2px 12px rgba(0,0,0,0.10);
+        background: linear-gradient(135deg, #fff2, #f9731622 60%);
+        z-index: 2;
+      }
+      main div[style*="display: flex"] a:hover::after {
+        opacity: 1;
+        background: radial-gradient(circle at 60% 40%, #fff7 0%, transparent 80%);
+      }
+      main div[style*="display: flex"] a:active {
+        transform: scale(1.08) translateY(-2px);
+      }
+      main div[style*="display: flex"] a i {
+        font-size: 2.2rem;
+        transition: color 0.3s;
+        z-index: 1;
+      }
+      main div[style*="display: flex"] a[href*="discord"]:hover i,
+      main div[style*="display: flex"] a[href*="instagram"]:hover i,
+      main div[style*="display: flex"] a[href*="facebook"]:hover i,
+      main div[style*="display: flex"] a[href*="twitter"]:hover i {
+        color: #fff;
+      }
+    </style>
   </main>
 
   <footer class="footer">
