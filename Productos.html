@@ -10,23 +10,194 @@
 </head>
 <body>
 
-  <header class="navbar">
+  <header class="navbar animated-navbar">
     <a href="It's Time To Travel.html" class="logo-link-independiente">
-      <img src="logo.png" alt="Logo de Melvin & Yan" class="logo-independiente" />
+      <img src="logo.png" alt="Logo de Melvin & Yan" class="logo-independiente animated-logo" />
     </a>
-    
-    <div class="derechos">Melvin & Yan</div>
-    <nav class="nav-links">
-      <a href="It's Time To Travel.html">Inicio</a>
-      <a class="active" href="Productos.html">Productos</a>
-      <a href="Contacto.html">Contacto</a>
+    <div class="derechos animated-title">Melvin & Yan</div>
+    <nav class="nav-links animated-menu">
+      <a href="It's Time To Travel.html" class="nav-link">Inicio</a>
+      <a class="active nav-link" href="Productos.html">Productos</a>
+      <a href="Contacto.html" class="nav-link">Contacto</a>
     </nav>
-    <div class="search">
+    <div class="search animated-search">
       <input type="text" placeholder="Search..." />
       <button>🔍</button>
     </div>
-
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menú"><i class="fas fa-bars"></i></button>
   </header>
+  <style>
+    .navbar.animated-navbar {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(8px);
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      animation: navbarFadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.1s both;
+      z-index: 100;
+    }
+    @keyframes navbarFadeIn {
+      0% { opacity: 0; transform: translateY(-40px) scale(0.98); }
+      100% { opacity: 1; transform: none; }
+    }
+    .logo-independiente.animated-logo {
+      height: 80px;
+      margin-left: 0;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+      transition: transform 0.4s cubic-bezier(.77,0,.18,1), box-shadow 0.3s;
+      background: #fff;
+      padding: 6px 10px;
+      animation: logoPop 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;
+    }
+    .logo-independiente.animated-logo:hover {
+      transform: scale(1.08) rotate(-3deg);
+      box-shadow: 0 8px 32px rgba(249,115,22,0.18);
+    }
+    @keyframes logoPop {
+      0% { opacity: 0; transform: scale(0.7) rotate(-10deg); }
+      100% { opacity: 1; transform: none; }
+    }
+    .animated-title {
+      font-size: 1.7rem;
+      font-family: 'Montserrat', cursive;
+      font-weight: 700;
+      color: #f7931e;
+      letter-spacing: 2px;
+      margin-left: 120px;
+      text-shadow: 1px 2px 8px #fff7, 0 1px 0 #f7931e22;
+      animation: titleSlideIn 1.2s cubic-bezier(.77,0,.18,1) 0.3s both;
+    }
+    @keyframes titleSlideIn {
+      0% { opacity: 0; transform: translateX(-60px); }
+      100% { opacity: 1; transform: none; }
+    }
+    .animated-menu {
+      display: flex;
+      gap: 18px;
+      animation: menuFadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.4s both;
+    }
+    @keyframes menuFadeIn {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: none; }
+    }
+    .nav-link {
+      position: relative;
+      font-size: 1.1rem;
+      color: #0f172a;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 8px 22px;
+      border-radius: 22px;
+      background: none;
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+      overflow: hidden;
+    }
+    .nav-link.active, .nav-link:hover {
+      background: linear-gradient(90deg, #f7931e 60%, #fbbf24 100%);
+      color: #fff;
+      box-shadow: 0 2px 12px #f7931e33;
+      transform: scale(1.08);
+    }
+    .nav-link::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      bottom: 6px;
+      width: 0;
+      height: 3px;
+      background: #f7931e;
+      border-radius: 2px;
+      transition: width 0.3s, left 0.3s;
+    }
+    .nav-link:hover::after, .nav-link.active::after {
+      width: 60%;
+      left: 20%;
+    }
+    .animated-search {
+      animation: searchFadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.5s both;
+    }
+    @keyframes searchFadeIn {
+      0% { opacity: 0; transform: translateX(40px); }
+      100% { opacity: 1; transform: none; }
+    }
+    .menu-toggle {
+      display: none;
+      background: #f7931e;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 1.5rem;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-left: 18px;
+      transition: background 0.3s, transform 0.3s;
+      z-index: 200;
+    }
+    .menu-toggle:hover {
+      background: #e57b00;
+      transform: scale(1.12);
+    }
+    @media (max-width: 900px) {
+      .navbar.animated-navbar {
+        flex-wrap: wrap;
+        padding: 18px 18px 10px 18px;
+      }
+      .animated-title { margin-left: 0; font-size: 1.2rem; }
+      .logo-independiente.animated-logo { height: 60px; }
+      .animated-menu { gap: 8px; }
+    }
+    @media (max-width: 700px) {
+      .animated-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: rgba(255,255,255,0.98);
+        box-shadow: 0 8px 32px #f7931e22;
+        border-radius: 0 0 18px 18px;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 200px;
+        padding: 18px 0 12px 0;
+        gap: 0;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 0.4s, transform 0.4s;
+        z-index: 150;
+      }
+      .animated-menu.open {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    // Menú hamburguesa animado para móviles
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.animated-menu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+      if(menuToggle.classList.contains('open')) {
+        menuToggle.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+  </script>
 
   <section class="hero-productos">
     <div class="hero-content">
@@ -147,54 +318,24 @@
 </script>
 
 <footer class="footer">
-  <div class="footer-container">
-    <div class="footer-col brand">
-      <h2>It’s Time to Travel</h2>
-      <p>Explora. Descubre. Vive.</p>
+    <div class="footer-content" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 0; background: rgba(255,255,255,0.10); border-radius: 0 0 32px 32px; box-shadow: 0 -2px 12px rgba(0,0,0,0.06); animation: footerFadeIn 1.2s cubic-bezier(.77,0,.18,1) 0.2s both;">
+      <p style="font-family: 'Montserrat', sans-serif; color: #f7931e; font-size: 1.1rem; margin-bottom: 6px; letter-spacing: 1px;">© 2025 It’s Time To Travel. Todos los derechos reservados.</p>
+      <span style="color: #0f172a; font-size: 0.95rem; opacity: 0.7;">Desarrollado por Melvin & Yan.</span>
     </div>
-    <div class="footer-col">
-      <h3>Enlaces</h3>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Destinos</a></li>
-        <li><a href="#">Promociones</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Síguenos</h3>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    © 2025 It’s Time to Travel. Todos los derechos reservados.
-  </div>
-
-  <!-- Particles.js -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<div id="particles-footer"></div>
-
-<script>
-  particlesJS("particles-footer", {
-    particles: {
-      number: { value: 60 },
-      color: { value: "#ffffff" },
-      shape: { type: "circle" },
-      opacity: { value: 0.1 },
-      size: { value: 3 },
-      move: { enable: true, speed: 1.5 },   
-      line_linked: { enable: false }
-    },
-    interactivity: {
-      events: { onhover: { enable: false }, onclick: { enable: false } }
-    }
-  });
-</script>
-</footer>
+    <style>
+      @keyframes footerFadeIn {
+        0% { opacity: 0; transform: translateY(40px) scale(0.98); }
+        100% { opacity: 1; transform: none; }
+      }
+      .footer-content {
+        transition: background 0.4s, box-shadow 0.4s;
+      }
+      .footer-content:hover {
+        background: rgba(247,147,30,0.08);
+        box-shadow: 0 -4px 24px #f7931e22;
+      }
+    </style>
+  </footer>
 
 
 

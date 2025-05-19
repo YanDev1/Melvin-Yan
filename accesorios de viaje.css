@@ -50,7 +50,7 @@ body.dark {
 }
 .producto:hover { transform: translateY(-5px); }
 .producto img {
-  width: 100%;+
+  width: 100%;
   max-height: 160px;
   height: auto;
   object-fit: contain;
@@ -58,7 +58,7 @@ body.dark {
   display: block;
   margin: 0 auto;
 }
-+
+
 .producto h3 { margin: .8rem 0 .3rem; color: var(--text); }
 .producto p { margin-bottom: .8rem; color: var(--text); }
 .producto button {
