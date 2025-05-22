@@ -1,4 +1,4 @@
-// script.js
+// accesorios de viaje.js
 
 // — Referencias DOM únicas —
 const body        = document.body;
@@ -24,6 +24,10 @@ toggle.addEventListener('click', () => {
 carritoBtn.addEventListener('click', () => {
   carritoEl.classList.toggle('open');
 });
+
+const carritoToggle = document.getElementById('carrito-toggle');
+carritoToggle.classList.add('added');
+setTimeout(() => carritoToggle.classList.remove('added'), 300);
 
 // — Agregar producto con sonido y animaciones —
 document.querySelectorAll('.agregar').forEach(btn => {
